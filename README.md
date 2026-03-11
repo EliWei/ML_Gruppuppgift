@@ -1,10 +1,69 @@
-# ML_Gruppuppgift - Marketplace Safety – prioritera misstänkta annonser och meddelanden
-Pythonversion 3.13
+# Marketplace Safety – ML-projekt
+
+## Projektbeskrivning
+Detta projekt handlar om att utveckla en maskininlärningsmodell som hjälper ett Trust & Safety-team att prioritera vilka aktiviteter på en marknadsplatsplattform som bör granskas först.
+
+Varje rad i datan representerar en händelse (t.ex. annons eller meddelande). Modellen försöker förutsäga om händelsen är **misstänkt (`is_suspicious = 1`)** eller inte.
+
+Målet är inte att få 100 % rätt, utan att skapa ett beslutsstöd som kan prioritera vilka fall som bör granskas manuellt.
+
+---
+
+# Hur man kör projektet
+
+1. Klona repot - https://github.com/EliWei/ML_Gruppuppgift.git
 
 
+2. Öppna projektet i t.ex. VS Code eller Jupyter.
 
-README.md (kort)
-hur man kör projektet
-ert kravkort (stakeholder + prioritet, 2–3 meningar)
-er strategi (5–10 rader)
-ansvarsfördelning: vem ansvarade för vad
+3. Installera beroenden (om de saknas): pip install -r requirements.txt
+
+
+4. Säkerställ att följande filer finns i projektmappen:
+- `historical_data.csv`
+- `new_data.csv`
+
+5. Kör notebooken:
+
+
+Notebooken kan köras från början till slut med **"Restart & Run All"**.
+
+---
+
+# Kravkort
+
+**Stakeholder:** Customer Support (Lina, Customer Support Lead)
+
+Customer Support får klagomål när legitima användare flaggas. Därför är det viktigt att modellen **minimerar onödiga flaggningar** och att de fall som flaggas känns rimliga och konsekventa.
+
+Vår prioritet är därför att **hålla nere false positives och uppnå hög precision**, även om det innebär att vissa misstänkta fall missas.
+
+---
+
+# Strategi
+
+Vi byggde en klassificeringspipeline som hanterar både numeriska och kategoriska features genom imputering, skalning och one-hot encoding.
+
+Tre modeller jämfördes:
+- DummyClassifier (baseline)
+- Logistic Regression
+- Random Forest
+
+Logistic Regression valdes som slutlig modell eftersom den gav bäst precision enligt vårt kravkort.
+
+Modellen optimerades med **GridSearchCV** där hyperparametrar som regularisering (`C`) och `class_weight` testades.
+
+För att använda modellen i praktiken analyserade vi olika **threshold-värden** och valde en threshold på **0.4**. Detta gav en bra balans mellan att identifiera misstänkta fall och att undvika onödiga flaggningar.
+
+---
+
+# Ansvarsfördelning
+
+| Ansvarsområde | Person |
+|---|---|
+| Data & EDA |  |
+| Pipeline & Preprocessing |  |
+| Modelljämförelse |  |
+| Optimering |  |
+| Threshold / Prioritering |  |
+| Pitch & Risker |  |
