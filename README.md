@@ -67,5 +67,5 @@ För att använda modellen i praktiken analyserade vi olika **threshold-värden*
 | Pipeline & Preprocessing | Elisabeth |
 | Modelljämförelse | Victoria |
 | Optimering | Anarkoli |
-| Threshold / Prioritering | Daniel |
-| Pitch & Risker | Gruppen |
+| Threshold / Prioritering |  |
+| Pitch & Risker |  |
