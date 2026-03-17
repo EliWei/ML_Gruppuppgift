@@ -11,12 +11,13 @@ Målet är inte att få 100 % rätt, utan att skapa ett beslutsstöd som kan pri
 
 # Hur man kör projektet
 
-1. Klona repot - https://github.com/EliWei/ML_Gruppuppgift.git
+1. Klona repot
 
 
 2. Öppna projektet i t.ex. VS Code eller Jupyter.
 
-3. Installera beroenden (om de saknas): pip install -r requirements.txt
+3. Installera beroenden (om de saknas):
+
 
 
 4. Säkerställ att följande filer finns i projektmappen:
@@ -24,6 +25,7 @@ Målet är inte att få 100 % rätt, utan att skapa ett beslutsstöd som kan pri
 - `new_data.csv`
 
 5. Kör notebooken:
+
 
 
 Notebooken kan köras från början till slut med **"Restart & Run All"**.
@@ -61,9 +63,9 @@ För att använda modellen i praktiken analyserade vi olika **threshold-värden*
 
 | Ansvarsområde | Person |
 |---|---|
-| Data & EDA |  |
-| Pipeline & Preprocessing |  |
-| Modelljämförelse |  |
-| Optimering |  |
-| Threshold / Prioritering |  |
-| Pitch & Risker |  |
+| Data & EDA | Victoria |
+| Pipeline & Preprocessing | Elisabeth |
+| Modelljämförelse | Victoria |
+| Optimering | Anarkoli |
+| Threshold / Prioritering | Daniel |
+| Pitch & Risker | Gruppen |
