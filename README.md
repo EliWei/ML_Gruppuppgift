@@ -13,8 +13,7 @@ Målet är inte att få 100 % rätt, utan att skapa ett beslutsstöd som kan pri
 
 1. Klona repot
 
-
-2. Öppna projektet i t.ex. VS Code eller Jupyter.
+2. Öppna projektet i t.ex. VS Code eller Jupyter. Använd Python v 3.13
 
 3. Installera beroenden (om de saknas):
 
